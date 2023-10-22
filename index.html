@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://twitter-suppeded-checker.leductam.repl.co/ -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twitter interact check!!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="./check.js"></script>
+  <style>
+    .block:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="box">
+      <p class="bd-notification is-primary">Your Link:</p>
+      <input id="your_tweet_link" class="input"
+        placeholder="https://twitter.com/leductam2003/status/1715771579349758434"></textarea>
+    </div>
+    <div class="box">
+      <div id="total-tweets">Total: ...</div>
+      <p class="bd-notification is-primary">Tweet Links:</p>
+      <textarea id="tweet_links" class="textarea"
+        placeholder="https://twitter.com/leductam2003/status/1715771579349758434"></textarea>
+      <br/><button id="check" onclick="filterLinks()" class="button is-normal">Filter</button>
+    </div>
+    <div class="box">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <div id="total-reply">Total: ...</div>
+          <p class="bd-notification is-primary">Already Reply:</p>
+          <textarea id="already_reply" class="textarea is-success"
+            placeholder="Username that already reply your tweet" readonly></textarea>
+        </div>
+
+        <div class="column">
+          <div id="total-not-reply">Total: ...</div>
+          <p class="bd-notification is-primary">Not Reply:</p>
+          <textarea id="not_reply" class="textarea is-danger"
+            placeholder="Username that not reply your tweet" readonly></textarea>
+        </div>
+      </div>
+    </div>
+
+    <button id="check" onclick="startCheck()" class="button is-normal">Check</button>
+
+    <button id="clear" onclick="eraseTextArea()" class="button is-normal">Clear</button>
+    <div class="box">
+      <div id="bot-status" class="message-body">...
+      </div>
+    </div>
+    <br>
+    <p class="subtitle">
+      Twitter interact check<strong>@leductam2003</strong>!
+    </p>
+
+  </section>
+
+</body>
+
+</html>
